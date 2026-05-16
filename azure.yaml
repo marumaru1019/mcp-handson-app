@@ -9,12 +9,14 @@ services:
     project: ./todo-api
     docker:
       path: Dockerfile
+      remoteBuild: true
   mcp:
     host: containerapp
     language: py
     project: ./todo-mcp
     docker:
       path: Dockerfile
+      remoteBuild: true
   web:
     host: staticwebapp
     language: js
