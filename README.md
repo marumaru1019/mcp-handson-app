@@ -1,8 +1,6 @@
 # handson-app
 
 MCP ハンズオン参加者用のスターターディレクトリです。
-リポジトリ直下の完成形（`app/`, `mcp-server/`, `frontend/`, `infra/`）とは独立しており、
-このフォルダだけで全章のハンズオンを進められるよう構成しています。
 
 ## ディレクトリ構成
 
@@ -12,7 +10,7 @@ MCP ハンズオン参加者用のスターターディレクトリです。
 | `frontend/` | ② 任意 | React + Vite 製の TODO 管理画面（完成済み） |
 | `hello-mcp/` | ③ はじめての MCP サーバー | 最小 MCP サーバーの**雛形**（参加者がツールを実装する） |
 | `todo-mcp/` | ④ TODO API を呼び出す MCP サーバー | TODO API を呼ぶ MCP サーバーの**雛形**（参加者がツールを実装する） |
-| `infra/` | ⑥ Azure Container Apps デプロイ | `azd` 用 Bicep（APIM 抜きの最小構成） |
+| `infra/` | ⑥ Azure Container Apps デプロイ | `azd` 用 Bicep |
 | `azure.yaml` | ⑥ | `azd` のサービス定義（api / mcp / web） |
 
 ## 進め方
