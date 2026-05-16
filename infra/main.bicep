@@ -1,4 +1,3 @@
-// APIM を除いたハンズオン用シンプル版 main.bicep
 // 含むリソース: Resource Group / Log Analytics / Container Registry / Container Apps Environment
 //             / Container App (TODO API) / Container App (MCP Server) / Static Web App
 
