@@ -78,6 +78,7 @@ module containerApp './modules/container-app.bicep' = {
     containerRegistryLoginServer: containerRegistry.outputs.loginServer
     imageName: !empty(apiImageName) ? apiImageName : 'mcr.microsoft.com/azuredocs/containerapps-helloworld:latest'
     targetPort: 8000
+    allowedOrigins: '${staticWebApp.outputs.uri},http://localhost:5173'
   }
 }
 

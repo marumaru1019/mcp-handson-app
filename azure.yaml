@@ -26,5 +26,5 @@ services:
       steps:
         - run: npm install
           shell: sh
-        - run: npm run build
+        - run: VITE_API_URL="$AZURE_CONTAINER_APP_URI" npm run build
           shell: sh
