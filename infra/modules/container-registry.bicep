@@ -1,0 +1,24 @@
+@description('Container Registry 名')
+param name string
+
+@description('デプロイリージョン')
+param location string
+
+@description('リソースタグ')
+param tags object = {}
+
+resource containerRegistry 'Microsoft.ContainerRegistry/registries@2023-11-01-preview' = {
+  name: name
+  location: location
+  tags: tags
+  sku: {
+    name: 'Basic'
+  }
+  properties: {
+    adminUserEnabled: true
+  }
+}
+
+output id string = containerRegistry.id
+output name string = containerRegistry.name
+output loginServer string = containerRegistry.properties.loginServer

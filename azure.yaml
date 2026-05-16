@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+name: mcp-todo-handson
+metadata:
+  template: mcp-todo-handson
+services:
+  api:
+    host: containerapp
+    language: py
+    project: ./todo-api
+    docker:
+      path: Dockerfile
+  mcp:
+    host: containerapp
+    language: py
+    project: ./todo-mcp
+    docker:
+      path: Dockerfile
+  web:
+    host: staticwebapp
+    language: js
+    project: ./frontend
+    dist: dist
+    build:
+      steps:
+        - run: npm install
+          shell: sh
+        - run: npm run build
+          shell: sh
